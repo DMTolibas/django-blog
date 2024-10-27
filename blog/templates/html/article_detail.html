@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+    <p>by <a href="{% url 'author_detail' article.author.id %}">{{ article.author.last_name}}, {{article.author.given_name}}</a></p>
+    <p>{{ article.content }}</p>
+    <a href="{% url 'main_page' %}">Back to articles</a>
+</body>
+</html>

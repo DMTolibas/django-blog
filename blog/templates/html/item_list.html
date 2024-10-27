@@ -1,0 +1,21 @@
+<!-- templates/item_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+{{context}}
+<head>
+    <meta charset="UTF-8">
+    <title>Database Content</title>
+</head>
+<body>
+    <h1>Articles List</h1>
+    <h2></h2>
+    <ul>
+        {% for article in article_list %}
+            <li>
+                <h2>{{article.title}}</h2>
+                <p>{{article.date_created}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

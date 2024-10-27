@@ -1,0 +1,14 @@
+.h1 {
+    font-size: 255px;
+    color: yellow;
+}
+
+.p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+    font-size: 20px;
+    text-align: left;
+    text-indent: 5%;
+    color: yellow;
+}

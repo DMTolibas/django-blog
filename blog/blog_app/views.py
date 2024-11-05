@@ -69,11 +69,11 @@ def contact_page(request):
 def thank_you(request):
     return render(request, 'html/thank_you.html')
 
-def article_detail(request, article_id):
+def article_page(request, article_id):
     #get_object_or_404 obtain single object or throw 404 if no record is found.
     article = get_object_or_404(Article, pk=article_id)  #pk means primary key, the unique code of a specific record
     context = {'article': article}
-    return render(request, 'html/article_detail.html', context)
+    return render(request, 'html/article_page.html', context)
 
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)

@@ -10,7 +10,7 @@
     <ul>
         {% for article in author.articles.all %}
             <li>
-                <a href="{% url 'article_detail' article.id %}">{{ article.title }}</a>
+                <a href="{% url 'article_page' article.id %}">{{ article.title }}</a>
             </li>
         {% endfor %}
     </ul>

@@ -17,7 +17,7 @@ urlpatterns = [
     path('thank-you/', views.thank_you, name='thank_you'),
 
     
-    path('article/<int:article_id>/', views.article_detail, name='article_detail'),     
+    path('article/<int:article_id>/', views.article_page, name='article_page'),     
     path('author/<int:author_id>/', views.author_detail, name='author_detail'),
 ]
 

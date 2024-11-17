@@ -1,36 +1,26 @@
-{% load static %}
-<!--It is required because its tell the django to load the files under static folder-->
+{% extends "html/layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-
-    <link rel="stylesheet"  href= "{% static 'css/aboutpage_style.css' %}">
+{% block title%} DMT Blog | About {% endblock %}
 
 
-</head>
+{% block body %}
 
-<body>
-    <h1 class = "subtitle-about">About<h1>
-    <hr>
+    <body>
+        <div class="main-content">
+                <h1>About<h1>
+                <hr>
+            
+                This website is intended for personal use only, not for commercial or any purposes. I, Deniel, created this website to showcase my knowledge in Django, a web framework.
+                It is my very first website that I have created (and surely not my last), so it may have a lot of bugs and poor design. However, rest assured that I would update this website.
+                    <br> <br>
+                This means that all data in this website is fake and copied in internet only or in other word, dummy data. More data will be added for more challenge. 
+            
+                <h2>Message to Future</h2>
+                <p>I hope you achieve your dream!</p>
+            
+                <br>
+                <a href = "{% url 'main_page'%}" ><button id = "back-button">>>Back</button></a>
+        </div>
+    </body>
 
-    <p class = "message">
-       This website is intended for personal use only, not for commercial or any purposes. I, Deniel, created this website to showcase my knowledge in Django, a web framework.
-       It is my very first website that I have created (and surely not my last), so it may have a lot of bugs and poor design. However, rest assured that I would update this website.
-        <br> <br>
-       This means that all data in this website is fake and copied in internet only or in other word, dummy data. More data will be added for more challenge. 
-    </p>
-
-    <h2  class = "subtitle-about">Message to Future</h2>
-    <p class = "message">I hope you achieve your dream!</p>
-
-    <br>
-    <a href = "{% url 'main_page'%}" ><button id = "back-button">>>Back</button></a>
-   
-</body>
-
-</html>
+{% endblock %}

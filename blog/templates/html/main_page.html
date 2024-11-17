@@ -1,61 +1,14 @@
-{% load static %}
+ {% extends "html/layout.html" %}
 
-<!DOCTYPE html>
+{% block title%} DMT Blog | Home {% endblock %}
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="Description" content="First Blog website.">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-        <meta http-equiv = "refresh" content="30">
-        <title>DMT Blog</title>
-        
-        <link rel="stylesheet" href= "{% static 'css/mainpage_style.css' %}">
-
-        
-
-    </head>
-
-    <body>
-        
-        <div class="container">
-            <div class = "grid-container head" > <strong> Welcome to DMT Blog!  </strong> <br>
-                 <p id = "subtitle"> Where our story begun! </p> </div>
-                 
-            <div class = "grid-container content"> Content
-                <ul>
-                    {% for article in articles %}
-                        <li id  = "article-title">
-                            <a href="{% url 'article_page' article.id %}">{{ article.title }}</a>
-                            by <a href="{% url 'author_detail' article.author.id %}">{{ article.author.last_name}}, {{article.author.given_name}}</a>
-
-                            <p id = "text-content">{{article.content}}</p>
-                        </li>
-                       
-                    {% endfor %}
-                </ul>
-                
-            </div>
-            
-            <div class = "grid-container navigation"> <b>Navigation</b>
-                <ul>
-                    <a href="{% url 'main_page' %}"><li>Home</li></a>
-                    <a href="{% url 'about_page' %}"><li>About</li> </a>
-                    <a href="{% url 'contact_page' %}"><li>Contact me</li> </a>
-                </ul>
-            
-            </div>
-            
-            <div class = "grid-container foot"> Footer
-                <p id= "footer-note" >This is done by Deniel Moises for practicing his skill in making website.</p>
-            </div>   
-                     
-        </div>
-        
-        
-        
-        
-    </body>
-    
-    
-</html>
+{% block body %}
+<div class="main-content">
+    {% for article in articles %}
+       <h3 id="title"> {{article.title}} </h3> <h5 id="writer"> by {{article.author.given_name}} {{article.author.last_name}}</h5> <br>
+          <p id="content">{{article.content}}</p> 
+        <br>
+        <br>
+    {% endfor %}         
+</div>
+{% endblock %}

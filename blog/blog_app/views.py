@@ -16,7 +16,7 @@ def main_page(request):
     author = Article.objects.all()
     context = {'articles': article, 'author': author}
     #send the httprequest with the template, dictionary means the article in template is the article object
-    return render(request, 'html/layout.html', context) # CHANGE MAIN_PAGE.HTML -> LAYOUT.HTML
+    return render(request, 'html/main_page.html', context) # CHANGE MAIN_PAGE.HTML -> LAYOUT.HTML
 
 def about_page(request):
     return render(request, 'html/about.html')

@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
         <meta http-equiv = "refresh" content="30">
 
-        <title>DMT Blog</title>
+        <title> {% block title %}DMT Blog {% endblock title%} </title>
 
         <!--Bootstrap first before the css file-->
 
@@ -53,18 +53,9 @@
             </nav>
           </div>
   
-
-          <div class="main-content">
-              {% for article in articles %}
-                 <h3 id="title"> {{article.title}} </h3> <h5 id="writer"> by {{article.author.given_name}} {{article.author.last_name}}</h5> <br>
-                    <p id="content">{{article.content}}</p> 
-                  <br>
-                  <br>
-              {% endfor %}
-
-              
-          </div>
-
+          {% block body %}
+       
+          {% endblock %}
 
           <div class="footer">
             <br>

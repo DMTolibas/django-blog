@@ -6,6 +6,7 @@ Important: The static folder can be under the project folder or become app speci
 
 body {
     background-color: black;
+    padding: 5px;
     font-size: 14px;
     font-family: "Helvetica", "Arial", "Georgia", "Tahoma", "Roboto";
     color: white; 
@@ -60,5 +61,9 @@ body {
     padding: 5px;
 
     font-style: italic;
+
+}
+
+#contact-style {
 
 }

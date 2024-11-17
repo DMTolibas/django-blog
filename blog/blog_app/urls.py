@@ -1,9 +1,3 @@
-'''
-User: denden
-Password: django_denden1234
-'''
-
-
 from django.urls import path
 from . import views
 

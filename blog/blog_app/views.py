@@ -12,10 +12,11 @@ from .forms import FeedbackForm
 
 def main_page(request): 
     #get all article obj in database
-    data = Article.objects.all()
-    context = {'articles': data}
+    article = Article.objects.all()
+    author = Article.objects.all()
+    context = {'articles': article, 'author': author}
     #send the httprequest with the template, dictionary means the article in template is the article object
-    return render(request, 'html/main_page.html', context)
+    return render(request, 'html/layout.html', context) # CHANGE MAIN_PAGE.HTML -> LAYOUT.HTML
 
 def about_page(request):
     return render(request, 'html/about.html')
@@ -27,7 +28,7 @@ def contact_page(request):
 #handle feedback
 def feedback_data(request):
     #Handle Post request - method that change the database
-    if request.method == 'POST':
+    if request.method == 'POST':Ch
         form = FeedbackForm(request.POST)
         #Handle valid data form
         if form.is_valid():

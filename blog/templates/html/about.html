@@ -5,22 +5,23 @@
 
 {% block body %}
 
-    <body>
         <div class="main-content">
                 <h1>About<h1>
                 <hr>
             
-                This website is intended for personal use only, not for commercial or any purposes. I, Deniel, created this website to showcase my knowledge in Django, a web framework.
-                It is my very first website that I have created (and surely not my last), so it may have a lot of bugs and poor design. However, rest assured that I would update this website.
-                    <br> <br>
-                This means that all data in this website is fake and copied in internet only or in other word, dummy data. More data will be added for more challenge. 
-            
+                    <p style="font-size: 14px">This website is intended for personal use only, not for commercial or any purposes. I, Deniel, created this website to showcase my knowledge in Django, a web framework.
+                    It is my very first website that I have created (and surely not my last), so it may have a lot of bugs and poor design. However, rest assured that I would update this website.
+                        <br> <br>
+                    This means that all data in this website is fake and copied in internet only or in other word, dummy data. More data will be added for more challenge. 
+                    </p>
+                    
+                    <br>
                 <h2>Message to Future</h2>
-                <p>I hope you achieve your dream!</p>
-            
+                    <p> Keep up bro</p>
+                
                 <br>
-                <a href = "{% url 'main_page'%}" ><button id = "back-button">>>Back</button></a>
+                <a class="btn btn-light btn-lg" href="{% url 'main_page'%}" button id = "back-button" role="button">Back</a>
+
         </div>
-    </body>
 
 {% endblock %}

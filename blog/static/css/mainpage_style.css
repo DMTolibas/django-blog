@@ -7,7 +7,7 @@ Important: The static folder can be under the project folder or become app speci
 body {
     background-color: black;
     padding: 5px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Helvetica", "Arial", "Georgia", "Tahoma", "Roboto";
     color: white; 
 }
